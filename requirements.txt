@@ -1,0 +1,12 @@
+# 运行时核心依赖
+fastapi>=0.110
+uvicorn[standard]>=0.27
+pydantic>=2.6
+requests>=2.31
+httpx>=0.26
+urllib3>=2.0
+curl_cffi>=0.6
+cloudscraper>=1.2.71
+beautifulsoup4>=4.12
+python-dotenv>=1.0
+slowapi>=0.1.9

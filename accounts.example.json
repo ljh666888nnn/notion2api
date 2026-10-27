@@ -1,0 +1,15 @@
+[
+  {
+    "profile_name": "default",
+    "token_v2": "v03%3Areplace-with-your-own-token",
+    "space_id": "00000000-0000-0000-0000-000000000001",
+    "user_id": "00000000-0000-0000-0000-000000000002",
+    "space_view_id": "00000000-0000-0000-0000-000000000003",
+    "user_name": "your-name",
+    "user_email": "you@example.com",
+    "weight": 1,
+    "priority": 0,
+    "max_concurrency": 1,
+    "cookies": {}
+  }
+]

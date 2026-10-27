@@ -1,0 +1,7 @@
+# 开发与可选依赖
+pytest>=8.0
+
+# 仅在跑 scripts/ 下的工具时需要
+# Pillow>=10.0          # 图片处理（vision 插件、截图分析）
+# playwright>=1.40      # 浏览器自动化（注册 / 登录态抓取）
+# websocket-client>=1.7 # CDP 相关脚本

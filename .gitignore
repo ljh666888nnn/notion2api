@@ -1,0 +1,138 @@
+data/
+# ============================================================
+# 凭据与账号数据 —— 绝对不能提交
+# ============================================================
+# 环境变量（含 API_KEY）；只保留示例
+.env
+.env.*
+!.env.example
+
+# Notion 会话/账号：token_v2、space_id、cookie 全在里面
+accounts.json
+accounts*.json
+!accounts.example.json
+account.*.json
+mailtm_cred.json
+*cred*.json
+*credential*
+cookies*
+cookie*
+
+# 浏览器抓包 / 登录态
+watch.jsonl
+awa_home2.html
+response/
+
+# ============================================================
+# 采集与探测产物（含真实邮箱、验证码、账号清单）
+# ============================================================
+awamail_probe/
+scripts/*result*.json
+scripts/*_result.json
+scripts/explore_result.json
+
+# ============================================================
+# 本地运行时数据
+# ============================================================
+state/
+backups/
+output/
+logs/
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+*.log
+*.pid
+*.zip
+
+# ============================================================
+# 缓存与构建产物
+# ============================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+.venv*/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+node_modules/
+.parcel-cache/
+.vite/
+
+# ============================================================
+# 备份与临时文件
+# ============================================================
+*.bak
+*.bak-*
+*backup*
+!app/backup.py
+*.backup
+*-backup.*
+*.tmp
+*.old
+*.orig
+*.rej
+tmp_*.log
+debug_*.log
+
+# ============================================================
+# 编辑器与本地配置
+# ============================================================
+.vscode/
+.idea/
+.claude/
+*.swp
+.DS_Store
+Thumbs.db
+docker-compose.override.yml
+deploy/*.local
+
+# ============================================================
+# 其他
+# ============================================================
+image.png
+0311_cleanup/
+
+# ============================================================
+# 本地工具（逆向/破解脚本，不进版本库）
+# ============================================================
+dgvip/
+disx.py
+emb.py
+emb2.py
+locate.py
+patch_vip.py
+pe.py
+prolog.py
+ptr.py
+rsrc.py
+strs.py
+verify.py
+who.ps1
+xref.py
+
+# 注意：tests/ 与 test_*.py 必须提交（开源项目需要测试）
+# 注意：.env.example 必须提交（不能含真实 Key）
+
+# ============================================================
+# 其他凭据形态（云隧道、证书、会话文件）
+# ============================================================
+.cloudflared/
+*.pem
+*.key
+*.p12
+*.pfx
+*.session
+*.cookie

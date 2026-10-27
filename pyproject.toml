@@ -1,0 +1,17 @@
+[tool.ruff]
+# 只看真实的错误类规则：未定义名、未使用导入、语法/缩进问题。
+# 不做风格改造（行宽、引号、import 排序），避免开源时产生一堆无关 diff。
+line-length = 110
+target-version = "py310"
+extend-exclude = ["frontend", "admin-dashboard", "output", "node_modules"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
+# E402：本仓库有若干「先读环境变量再 import」的模块，属于有意为之
+ignore = ["E402"]
+
+[tool.ruff.lint.per-file-ignores]
+# 一次性探测脚本里有大量「先赋值再打印」的写法，不必强制清理
+"scripts/*" = ["F841"]
+# chat.py 是多分支 handler，各分支复用同名收集器，按分支判定为「未使用」是误报
+"app/api/chat.py" = ["F841"]
